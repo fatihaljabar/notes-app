@@ -1,0 +1,629 @@
+:root {
+  --body: #e2e6e9;
+  --blue: #8da7fe;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  /* border: 2px solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-block: 40px;
+}
+
+h1.logo {
+  color: var(--black);
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 49px;
+  line-height: 1em;
+  margin: 0;
+}
+
+h1.logo span {
+  color: var(--blue);
+}
+
+body {
+  width: 100%;
+  background: var(--body);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas: 'header' 'content' 'footer';
+  padding-inline-start: 100px;
+  padding-inline-end: 100px;
+}
+
+main {
+  /* border: 2px solid pink; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 'header header sidebar sidebar' 'content content content content';
+}
+
+form-add-notes {
+  grid-area: header;
+}
+
+.addNotes {
+  /* border: 2px solid red; */
+  margin-block-end: 60px;
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 29px;
+  height: fit-content;
+}
+
+.contentAddNotes,
+.contentProfilNotes,
+.contentRecentNotes {
+  width: 100%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.imgH2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+
+h2 {
+  color: var(--black);
+  font-family: 'poppins', sans-serif;
+  font-weight: 600;
+  font-size: 29px;
+  line-height: 1em;
+}
+
+.hrHeading {
+  margin-block-start: 10px;
+  width: 100%;
+  border: solid 2px var(--black);
+  margin-block-end: 20px;
+}
+
+.imgH2 img {
+  width: 44px;
+  margin-inline-end: 20px;
+}
+
+.formAddNotes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.formContentAddNotes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.formContentAddNotes label {
+  color: var(--black);
+  font-family: 'poppins', sans-serif;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 1em;
+}
+
+.formContentAddNotes input {
+  border: solid 1px var(--black);
+  border-radius: 10px;
+  height: 35px;
+  margin-block-start: 10px;
+  margin-block-end: 15px;
+  padding-inline: 10px;
+  color: var(--black);
+  font-family: 'poppins', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1em;
+}
+
+.validation-message {
+  font-family: 'poppins', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1em;
+  color: red;
+}
+
+.formContentAddNotes textarea {
+  border: solid 1px var(--black);
+  border-radius: 10px;
+  height: 167px;
+  margin-block-start: 10px;
+  padding: 10px;
+  color: var(--black);
+  font-family: 'poppins', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.button {
+  display: flex;
+  justify-content: end;
+}
+
+.formAddNotes button {
+  margin-block-start: 20px;
+  color: var(--black);
+  font-family: 'poppins', sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  padding: 0.5rem 0.8rem;
+  line-height: 1em;
+  width: fit-content;
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border: 3px solid transparent;
+}
+
+.formAddNotes button:hover {
+  border: 3px solid var(--blue);
+  background-color: transparent;
+  color: var(--blue);
+}
+
+profil-notes {
+  grid-area: sidebar;
+}
+
+.profilNotes {
+  /* border: 2px solid red; */
+  margin-block-end: 60px;
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 29px;
+  height: fit-content;
+  margin-inline-start: 100px;
+}
+
+.contentProfilNotes p {
+  width: 100%;
+  font-family: 'poppins', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: justify;
+}
+
+.infoAllNotes {
+  margin-block-start: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background: var(--blue);
+  align-items: center;
+  border-radius: 10px;
+  height: 74px;
+  padding-inline: 10px;
+}
+
+.descriptionAllNotes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.descriptionAllNotes h4 {
+  font-family: 'poppins', sans-serif;
+  font-weight: 500;
+  font-size: 19px;
+  color: var(--white);
+  width: fit-content;
+}
+
+.imgAllNotes {
+  width: fit-content;
+  display: flex;
+  justify-content: end;
+}
+
+.imgAllNotes img {
+  width: 44px;
+}
+
+.recentNotes {
+  grid-area: content;
+  margin-block-end: 60px;
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 29px;
+  height: fit-content;
+}
+
+.cardRecentNotes {
+  width: 100%;
+  /* border: 2px solid red; */
+  display: grid;
+  grid-template-columns: 270px 270px 270px 270px 270px;
+  row-gap: 50px;
+}
+
+.justifyContent {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardNotes {
+  height: auto;
+  border: 2px solid var(--blue);
+  border-radius: 20px;
+  background: var(--white);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.imgH2Card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.imgH2Card img {
+  width: 30px;
+  margin-inline-end: 10px;
+}
+
+.imgH2Card h4 {
+  font-family: 'poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--black);
+}
+
+.hrCardNotes {
+  border: 1px solid var(--blue);
+  margin-block-start: 10px;
+  width: 100%;
+  margin-block-end: 10px;
+}
+
+.cardNotes p {
+  font-family: 'poppins', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--black);
+  text-align: justify;
+  height: 60px;
+  margin-block-end: 10px;
+}
+
+.buttonCardNotes {
+  display: flex;
+  column-gap: 10px;
+  justify-content: end;
+}
+
+.buttonCardNotes button#btnDetail {
+  /* margin-block-start: 15px; */
+  color: var(--black);
+  font-family: 'poppins', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  padding: 0.4rem 0.8rem;
+  line-height: 1em;
+  width: fit-content;
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border: 3px solid transparent;
+}
+
+.buttonCardNotes button#btnDetail:hover {
+  border: 3px solid var(--blue);
+  background-color: transparent;
+  color: var(--blue);
+}
+
+.buttonCardNotes button#btnDelete {
+  /* margin-block-start: 15px; */
+  color: var(--black);
+  font-family: 'poppins', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  padding: 0.4rem 0.8rem;
+  line-height: 1em;
+  width: fit-content;
+  background: rgba(255, 0, 0, 0.644);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border: 3px solid transparent;
+}
+
+.buttonCardNotes button#btnDelete:hover {
+  border: 3px solid rgba(255, 0, 0, 0.644);
+  background-color: transparent;
+  color: rgba(255, 0, 0, 0.644);
+}
+
+footer {
+  padding-block-end: 20px;
+  width: 100%;
+  color: var(--black);
+}
+
+.hrFooter {
+  border: 1px solid var(--black);
+  margin-block-end: 20px;
+}
+
+footer p {
+  color: var(--black);
+  max-width: 1080px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  font-style: italic;
+}
+
+footer .p1 {
+  margin-block-start: 15px;
+  font-style: normal;
+}
+
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    padding-inline-start: 50px;
+    padding-inline-end: 50px;
+    grid-template-columns: 1fr;
+  }
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'header' 'sidebar' 'content';
+  }
+  header {
+    margin-block: 30px;
+  }
+  h1.logo {
+    font-size: 36px;
+  }
+  .imgH2 img {
+    width: 40px;
+  }
+  form-add-notes h2 {
+    font-size: 21px;
+  }
+  profil-notes h2 {
+    font-size: 21px;
+  }
+  form-add-notes .formContentAddNotes label {
+    font-size: 16px;
+  }
+  form-add-notes .formContentAddNotes input {
+    font-size: 11px;
+  }
+  .validation-message {
+    font-size: 10px;
+  }
+  form-add-notes .formContentAddNotes textarea {
+    font-size: 11px;
+  }
+  form-add-notes .formAddNotes button {
+    font-size: 13px;
+  }
+  .addNotes,
+  .profilNotes,
+  .recentNotes {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding: 20px;
+  }
+  profil-notes .contentProfilNotes p {
+    font-size: 11px;
+  }
+  .infoAllNotes {
+    flex-direction: row;
+    padding-block: 10px;
+  }
+  .descriptionAllNotes h4 {
+    font-size: 13px;
+  }
+  .imgAllNotes img {
+    width: 30px;
+  }
+  .recentNotes h2 {
+    font-size: 21px;
+  }
+  .cardRecentNotes {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  .imgH2Card img {
+    width: 25px;
+  }
+  .imgH2Card h4 {
+    font-size: 14px;
+  }
+  .cardNotes p {
+    font-size: 11px;
+    height: 50px;
+  }
+  .buttonCardNotes button {
+    font-size: 10px;
+  }
+  footer p {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    padding-inline-start: 30px;
+    padding-inline-end: 30px;
+    grid-template-columns: 1fr;
+  }
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'header sidebar' 'content content';
+  }
+  header {
+    margin-block: 30px;
+  }
+  h1.logo {
+    font-size: 42px;
+  }
+  form-add-notes h2 {
+    font-size: 24px;
+  }
+  profil-notes h2 {
+    font-size: 24px;
+  }
+  form-add-notes .formContentAddNotes label {
+    font-size: 18px;
+  }
+  form-add-notes .formContentAddNotes input {
+    font-size: 14px;
+  }
+  .validation-message {
+    font-size: 12px;
+  }
+  form-add-notes .formContentAddNotes textarea {
+    font-size: 14px;
+  }
+  form-add-notes .formAddNotes button {
+    font-size: 13px;
+  }
+  .profilNotes {
+    margin-inline-start: 40px;
+    padding: 30px;
+  }
+  profil-notes .contentProfilNotes p {
+    font-size: 13px;
+  }
+  .descriptionAllNotes h4 {
+    font-size: 16px;
+  }
+  .imgAllNotes img {
+    width: 40px;
+  }
+  .recentNotes h2 {
+    font-size: 24px;
+  }
+  .cardRecentNotes {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .imgH2Card img {
+    width: 30px;
+  }
+  .imgH2Card h4 {
+    font-size: 16px;
+  }
+  .cardNotes p {
+    font-size: 14px;
+  }
+  .buttonCardNotes button {
+    font-size: 13px;
+  }
+  footer p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  body {
+    padding-inline-start: 30px;
+    padding-inline-end: 30px;
+    grid-template-columns: 1fr;
+  }
+  header {
+    margin-block: 30px;
+  }
+  h1.logo {
+    font-size: 46px;
+  }
+  form-add-notes h2 {
+    font-size: 26px;
+  }
+  form-add-notes .formAddNotes button {
+    font-size: 15px;
+  }
+  profil-notes h2 {
+    font-size: 28px;
+  }
+  .profilNotes {
+    margin-inline-start: 60px;
+  }
+  .descriptionAllNotes h4 {
+    font-size: 17px;
+  }
+  .recentNotes h2 {
+    font-size: 26px;
+  }
+  .cardRecentNotes {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  footer p {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .cardRecentNotes {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+}

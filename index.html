@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>note.s</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,900&family=Poppins:wght@100;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+
+  <body>
+    <my-header></my-header>
+    <main>
+      <form-add-notes></form-add-notes>
+      <profil-notes></profil-notes>
+      <section class="recentNotes">
+        <div class="contentRecentNotes">
+          <div class="imgH2">
+            <img src="./recentNotes.png" alt="" />
+            <h2>Recent Notes</h2>
+          </div>
+          <hr class="hrHeading" />
+          <div
+            id="notesContainer"
+            class="cardRecentNotes justifyContent scale-up-center"
+          ></div>
+        </div>
+      </section>
+    </main>
+    <my-footer></my-footer>
+    <script src="src/script/index.js" type="module"></script>
+  </body>
+</html>
